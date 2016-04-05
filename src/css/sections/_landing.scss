@@ -28,17 +28,17 @@
 	}
 
 	p{
-		text-shadow: 2px 2px 3px rgba(0,0,0, .5);
+		text-shadow: 2px 2px 3px #333;
 		font-size: 2.25em;
 		margin: 40px 15% 0 15%;
-		color: #fff;
+		color: $green;
 	}
 
 	a{
 		display: inline-block;
 		text-align: center;
 		margin-top: 50px;
-		color: #fff;
+		color: $green;
 	}
 
 	@media only screen and(max-width: 700px){
