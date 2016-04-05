@@ -1,7 +1,11 @@
 html {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Quattrocento', serif;
   background-color: #000;
   color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
 }
 
 body, html, h1, ul {
@@ -92,14 +96,13 @@ header {
 #navigation > a {
   margin-top: 15px;
   margin-left: 20px;
-  font-family: 'Black Ops One', cursive;
   color: #00b300;
   float: left;
   font-size: 1.25em;
   text-decoration: none;
 }
 #navigation > a:hover {
-  color: #33ff33;
+  color: #34ff34;
 }
 #navigation > a:hover:after {
   content: "cd /";
@@ -196,7 +199,6 @@ nav a {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  font-family: 'Black Ops One', serif;
   font-size: 16px;
   color: #00b300;
   text-decoration: none;
@@ -213,13 +215,13 @@ nav a:after {
   text-align: center;
   width: 0;
   height: 3px;
-  background-color: #33ff33;
+  background-color: #34ff34;
 }
 nav a:link, nav a:visited {
   color: #00b300;
 }
 nav a:hover {
-  color: #33ff33;
+  color: #34ff34;
 }
 @media screen and (max-width: 600px) {
   nav {
@@ -298,7 +300,6 @@ a.anim-nav-link:after {
   line-height: 1;
   margin: 0 5% 15px 5%;
   padding: 0;
-  font-family: 'Black Ops One', serif;
 }
 #landing h1 {
   margin-top: 75px;
@@ -351,7 +352,6 @@ a.anim-nav-link:after {
 }
 #about-me h1 {
   text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-  font-family: 'Black Ops One', sans-serif;
   text-align: center;
   color: #00b300;
   font-size: 3em;
@@ -476,7 +476,6 @@ div.treehouse {
 }
 #portfolio h1 {
   text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-  font-family: 'Black Ops One', sans-serif;
   text-align: center;
   color: #00b300;
   font-size: 3em;
@@ -674,7 +673,6 @@ div.api-projects .shadow:after, div.game-room .shadow:after, div.cms-custom .sha
 }
 #contact h1 {
   text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-  font-family: 'Black Ops One', sans-serif;
   text-align: center;
   color: #00b300;
   font-size: 3em;
@@ -692,7 +690,7 @@ div.api-projects .shadow:after, div.game-room .shadow:after, div.cms-custom .sha
   text-decoration: none;
 }
 #contact a:hover {
-  color: #006600;
+  color: #006700;
   text-decoration: none;
 }
 #contact li {
@@ -720,7 +718,7 @@ div.api-projects .shadow:after, div.game-room .shadow:after, div.cms-custom .sha
   width: 200px;
   padding: 10px 15px;
   border-radius: 10px;
-  border-bottom: 7px solid #003300;
+  border-bottom: 7px solid #003400;
 }
 #contact .open-form:hover {
   background-color: green;
@@ -729,7 +727,7 @@ div.api-projects .shadow:after, div.game-room .shadow:after, div.cms-custom .sha
   outline: none;
 }
 #contact button.contact-btn-anim {
-  border-bottom: 1px solid #003300;
+  border-bottom: 1px solid #003400;
 }
 
 #map {
@@ -857,7 +855,7 @@ footer a:link, footer a:visited {
   text-decoration: none;
 }
 footer a:hover {
-  color: #33ff33;
+  color: #34ff34;
   text-decoration: none;
 }
 

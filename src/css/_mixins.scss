@@ -22,7 +22,6 @@
 @mixin titles{
 	h1{
 		@include text-shadow;
-		font-family: 'Black Ops One', sans-serif;
 		text-align: center;
 		color: $green;
 		font-size: 3em;
