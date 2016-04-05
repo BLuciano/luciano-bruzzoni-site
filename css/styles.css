@@ -1,0 +1,905 @@
+html {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+body, html, h1, ul {
+  margin: 0;
+  padding: 0;
+}
+
+#top {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+@media screen and (max-width: 1030px) {
+  .container {
+    width: 95vw;
+    margin: 0 2.5vw;
+  }
+}
+
+#opening-anim {
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 2000;
+}
+#opening-anim div {
+  width: 50%;
+  height: 50%;
+  background-color: #0d0d0d;
+}
+#opening-anim div.t-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#opening-anim div.t-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#opening-anim div.b-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#opening-anim div.b-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#opening-anim div.hide {
+  height: 0;
+  width: 0;
+  -webkit-transition: all 3s;
+  -moz-transition: all 3s;
+  transition: all 3s;
+}
+#opening-anim p {
+  color: #00b300;
+  z-index: 2001;
+  position: relative;
+  font-size: 1.25em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 33%;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  z-index: 1001;
+}
+@media screen and (max-width: 600px) {
+  header {
+    border-bottom: 1px solid #00b300;
+  }
+}
+
+#navigation > a {
+  margin-top: 15px;
+  margin-left: 20px;
+  font-family: 'Black Ops One', cursive;
+  color: #00b300;
+  float: left;
+  font-size: 1.25em;
+  text-decoration: none;
+}
+#navigation > a:hover {
+  color: #33ff33;
+}
+#navigation > a:hover:after {
+  content: "cd /";
+  color: #fff;
+  padding-left: 5px;
+  font-style: italic;
+  margin-left: -10px;
+}
+#navigation > a:hover span {
+  left: 50px;
+}
+#navigation > a span {
+  position: relative;
+  display: inline-block;
+  background-color: #00b300;
+  width: 10px;
+  height: 20px;
+  -webkit-animation: blink 0.6s ease-in infinite;
+  -moz-animation: blink 0.6s ease-in infinite;
+  animation: blink 0.6s ease-in infinite;
+  -webkit-animation-direction: alternate-reverse;
+  -moz-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
+}
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  to {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+@-moz-keyframes blink {
+  from {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  to {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+@keyframes blink {
+  from {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  to {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+@media screen and (max-width: 600px) {
+  #navigation {
+    margin: 0;
+    width: 100%;
+  }
+}
+#navigation button {
+  display: none;
+  margin-top: 15px;
+  margin-right: 20px;
+  background-color: transparent;
+  font-size: 1.25em;
+  color: #fff;
+  float: right;
+  border: none;
+}
+@media screen and (max-width: 600px) {
+  #navigation button {
+    display: inline-block;
+  }
+}
+
+nav {
+  margin-top: 15px;
+  margin-right: 20px;
+  position: relative;
+  font-size: 0;
+  float: right;
+  display: block;
+}
+nav li {
+  position: relative;
+  display: inline-block;
+  margin-left: 25px;
+}
+nav.showNav li {
+  height: 20;
+}
+nav a {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: 'Black Ops One', serif;
+  font-size: 16px;
+  color: #00b300;
+  text-decoration: none;
+  display: inline-block;
+}
+nav a:after {
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  transition: width 0.5s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  text-align: center;
+  width: 0;
+  height: 3px;
+  background-color: #33ff33;
+}
+nav a:link, nav a:visited {
+  color: #00b300;
+}
+nav a:hover {
+  color: #33ff33;
+}
+@media screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 11px;
+  }
+  nav ul {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+    position: relative;
+    top: -35px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  nav li {
+    -webkit-transition: height 0.25s;
+    -moz-transition: height 0.25s;
+    transition: height 0.25s;
+    height: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    display: block;
+  }
+  nav a {
+    padding: 8px 0;
+    width: 100%;
+  }
+  nav a:after {
+    content: none;
+  }
+  nav a:hover {
+    background-color: #00b300;
+    color: #000;
+  }
+  nav.showNav ul {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+    top: 0px;
+    visibility: visible;
+    opacity: 1;
+  }
+  nav.showNav li {
+    -webkit-transition: height 0.25s;
+    -moz-transition: height 0.25s;
+    transition: height 0.25s;
+    height: 36px;
+  }
+}
+
+a.anim-nav-link:after {
+  width: 100%;
+}
+
+#landing {
+  background-color: #8fdce5;
+  background-image: -webkit-linear-gradient(top, #8fdce5, #000);
+  background-image: linear-gradient(to bottom,#8fdce5, #000);
+  padding-top: 50px;
+  width: 100%;
+  height: 600px;
+  background-color: #000;
+  background: url(../imgs/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+}
+#landing h1, #landing h2, #landing h3 {
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  transition: color 1s;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 1;
+  margin: 0 5% 15px 5%;
+  padding: 0;
+  font-family: 'Black Ops One', serif;
+}
+#landing h1 {
+  margin-top: 75px;
+  font-size: 3em;
+}
+#landing h2 {
+  font-size: 2em;
+}
+#landing h3 {
+  font-size: 1.5em;
+}
+#landing p {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  font-size: 2.25em;
+  margin: 40px 15% 0 15%;
+  color: #fff;
+}
+#landing a {
+  display: inline-block;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+@media only screen and (max-width: 700px) {
+  #landing {
+    background-attachment: scroll;
+  }
+}
+@media screen and (max-width: 450px) {
+  #landing h1 {
+    margin-top: 75px;
+    font-size: 2.50em;
+  }
+  #landing h2 {
+    font-size: 1.75em;
+  }
+  #landing h3 {
+    font-size: 1.25em;
+  }
+  #landing p {
+    font-size: 1.50em;
+  }
+}
+
+#about-me {
+  width: auto;
+  height: auto;
+  margin-top: 25px;
+  margin-bottom: 75px;
+}
+#about-me h1 {
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  font-family: 'Black Ops One', sans-serif;
+  text-align: center;
+  color: #00b300;
+  font-size: 3em;
+}
+#about-me .fa {
+  display: block;
+  text-align: center;
+}
+#about-me a {
+  color: green;
+  text-decoration: none;
+  font-weight: 600;
+}
+#about-me a:hover {
+  color: #00b300;
+}
+
+#my-pics {
+  -webkit-transition: margin-top 1s;
+  -moz-transition: margin-top 1s;
+  transition: margin-top 1s;
+  width: 35%;
+  max-height: 450px;
+  display: inline-block;
+  float: left;
+  margin: 150px 2.5% 75px 0;
+}
+#my-pics img {
+  box-shadow: 10px 10px 6px -6px rgba(255, 255, 255, 0.5);
+  max-width: 95%;
+  max-height: 450px;
+  margin: 15px 2.5%;
+  text-align: center;
+}
+@media screen and (max-width: 1030px) {
+  #my-pics {
+    -webkit-transition: margin-top 1s;
+    -moz-transition: margin-top 1s;
+    transition: margin-top 1s;
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 890px) {
+  #my-pics {
+    -webkit-transition: margin-top 1s;
+    -moz-transition: margin-top 1s;
+    transition: margin-top 1s;
+    float: none;
+    display: block;
+    width: 90%;
+    margin: 25px auto 0 auto;
+  }
+  #my-pics img {
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+div.description {
+  width: 60%;
+  display: inline-block;
+  margin: 40px 0 25px 2.5%;
+}
+div.description p {
+  line-height: 1.5;
+}
+@media screen and (max-width: 1030px) {
+  div.description {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 890px) {
+  div.description {
+    width: 90%;
+    margin: 20px 5% 0 5%;
+  }
+}
+
+div.treehouse {
+  clear: both;
+  height: auto;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.treehouse div.item {
+  display: inline-block;
+  float: left;
+  width: 23%;
+  margin: 10px 1%;
+}
+.treehouse div.item img {
+  vertical-align: bottom;
+  width: auto;
+  max-height: 200px;
+}
+@media screen and (max-width: 925px) {
+  .treehouse div.item {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .treehouse div.item img {
+    max-height: 125px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .treehouse div.item {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+}
+
+#portfolio {
+  position: relative;
+  text-align: center;
+  margin: 50px auto;
+  padding: 25px 0 50px 0;
+  width: 100%;
+  background-color: #bbb;
+}
+#portfolio h1 {
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  font-family: 'Black Ops One', sans-serif;
+  text-align: center;
+  color: #00b300;
+  font-size: 3em;
+}
+#portfolio h1 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
+}
+#portfolio div.buttons {
+  margin: 0 0 0 10%;
+  width: auto;
+  text-align: center;
+  float: left;
+}
+@media screen and (max-width: 875px) {
+  #portfolio div.buttons {
+    margin: 0 auto;
+    float: none;
+  }
+}
+#portfolio .buttons button {
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  display: block;
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+  margin: 25px 0;
+  border-radius: 50%;
+  background-color: #000;
+  text-align: center;
+  color: #00b300;
+  box-shadow: 2px 10px 15px #777;
+  border: 3px solid #00b300;
+}
+#portfolio .buttons button:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #00b300;
+  color: #000;
+}
+#portfolio .buttons button:focus, #portfolio .buttons button:active {
+  outline: none;
+}
+#portfolio .buttons button.active {
+  background-color: #00b300;
+  color: #000;
+}
+@media screen and (max-width: 875px) {
+  #portfolio .buttons button {
+    display: inline-block;
+    margin: 0 .5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #portfolio .buttons button {
+    width: 70px;
+    height: 70px;
+    border: 3px solid #00b300;
+    font-size: .85em;
+  }
+}
+
+div.code-pen {
+  clear: both;
+  margin-top: 75px;
+  text-align: center;
+}
+div.code-pen a {
+  text-decoration: none;
+  color: #00b300;
+}
+div.code-pen a:hover {
+  text-decoration: underline;
+}
+
+button.push-btn-anim {
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  -o-transform: scale(0.85);
+  transform: scale(0.85);
+  box-shadow: 2px 2px 5px #777;
+  outline: none;
+}
+
+div.api-projects, div.game-room, div.cms-custom, div.other-projects {
+  position: relative;
+  text-align: center;
+  margin: 75px auto;
+  display: inline-block;
+}
+div.api-projects.hidden, div.game-room.hidden, div.cms-custom.hidden, div.other-projects.hidden {
+  display: none;
+}
+div.api-projects div, div.game-room div, div.cms-custom div, div.other-projects div {
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+  width: 600px;
+  margin: 0 auto 20px 0;
+  border-radius: 15px;
+}
+div.api-projects div a, div.game-room div a, div.cms-custom div a, div.other-projects div a {
+  text-decoration: none;
+}
+div.api-projects div img, div.game-room div img, div.cms-custom div img, div.other-projects div img {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+}
+div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-projects div p {
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -60px;
+  width: 600px;
+  padding: 10px 0;
+  font-size: 1em;
+  text-align: center;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-projects div p {
+    font-size: .80em;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 688px) {
+  div.api-projects div, div.game-room div, div.cms-custom div, div.other-projects div {
+    margin: 10px 1% 20px 1%;
+    text-align: center;
+    width: 95%;
+  }
+  div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-projects div p {
+    width: auto;
+  }
+}
+div.api-projects .shadow:before, div.api-projects .shadow:after, div.game-room .shadow:before, div.game-room .shadow:after, div.cms-custom .shadow:before, div.cms-custom .shadow:after, div.other-projects .shadow:before, div.other-projects .shadow:after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  bottom: 22px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 500px;
+  background: #666;
+  box-shadow: 0 35px 20px #666;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+div.api-projects .shadow:after, div.game-room .shadow:after, div.cms-custom .shadow:after, div.other-projects .shadow:after {
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+@media screen and (max-width: 500px) {
+  div.api-projects .shadow:before, div.api-projects .shadow:after, div.game-room .shadow:before, div.game-room .shadow:after, div.cms-custom .shadow:before, div.cms-custom .shadow:after, div.other-projects .shadow:before, div.other-projects .shadow:after {
+    top: 65%;
+    box-shadow: 0 35px 15px #666;
+  }
+}
+@media screen and (max-width: 688px) {
+  div.api-projects, div.game-room, div.cms-custom, div.other-projects {
+    display: block;
+  }
+}
+@media screen and (max-width: 500px) {
+  div.api-projects, div.game-room, div.cms-custom, div.other-projects {
+    margin-top: 40px;
+  }
+}
+
+#contact {
+  position: relative;
+  margin-bottom: 250px;
+  text-align: center;
+}
+#contact h1 {
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  font-family: 'Black Ops One', sans-serif;
+  text-align: center;
+  color: #00b300;
+  font-size: 3em;
+}
+#contact h1 {
+  margin-bottom: 25px;
+}
+#contact p {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 25px 10px 25px;
+}
+#contact a:link, #contact a:active, #contact a:visited {
+  color: #00b300;
+  text-decoration: none;
+}
+#contact a:hover {
+  color: #006600;
+  text-decoration: none;
+}
+#contact li {
+  display: inline-block;
+  padding: 10px;
+  color: #000;
+}
+#contact .fa {
+  display: block;
+}
+#contact .open-form {
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
+  position: absolute;
+  bottom: -100px;
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background-color: #00b300;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border-bottom: 7px solid #003300;
+}
+#contact .open-form:hover {
+  background-color: green;
+}
+#contact .open-form:focus, #contact .open-form:active {
+  outline: none;
+}
+#contact button.contact-btn-anim {
+  border-bottom: 1px solid #003300;
+}
+
+#map {
+  max-width: 75%;
+  margin: 20px auto;
+  height: 350px;
+  box-shadow: 10px 10px 6px -6px rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 450px) {
+  #map {
+    height: 250px;
+  }
+}
+
+#form-message {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  position: fixed;
+  z-index: -1;
+  top: 100px;
+  left: 0;
+  right: 0;
+  font-size: 1.15em;
+  opacity: 0;
+  width: 70vw;
+  padding: 15px;
+  background-color: #ffe680;
+  margin: 0 auto;
+  text-align: center;
+  color: red;
+}
+#form-message.show-message {
+  opacity: 1;
+  z-index: 1001;
+}
+
+form {
+  text-align: center;
+  margin: 150px auto 0 auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  color: #00b300;
+  width: 60%;
+  outline-color: #fff;
+  outline-style: groove;
+  outline-width: thick;
+  display: none;
+}
+form input, form textarea {
+  padding: 12px;
+  margin-bottom: 0;
+  border: none;
+}
+form input:focus, form textarea:focus {
+  outline: none;
+}
+form input {
+  width: 250px;
+  height: 25px;
+  border-bottom: 1px solid #00b300;
+  background-color: #191919;
+  background-color: transparent;
+}
+form textarea {
+  width: 80%;
+  height: 175px;
+  resize: none;
+  background-color: #191919;
+  background-color: rgba(25, 25, 25, 0.95);
+}
+form button.send {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: -15px;
+  background-color: #004d00;
+  color: #fff;
+  border: none;
+  width: 125px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+form button.send:hover {
+  background-color: green;
+}
+form button.send:focus {
+  outline: none;
+}
+@media screen and (max-width: 800px) {
+  form {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 500px) {
+  form {
+    width: 85%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  form input, form textarea {
+    width: 80%;
+  }
+  form textarea {
+    font-size: .90em;
+  }
+}
+
+footer {
+  clear: both;
+  position: relative;
+  background-color: #111;
+  max-height: 100%;
+  text-align: center;
+  color: #999;
+  padding-top: 20px;
+  margin-top: 50px;
+}
+footer a {
+  padding: 5px;
+  font-weight: 600;
+}
+footer a:link, footer a:visited {
+  color: #00b300;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #33ff33;
+  text-decoration: none;
+}
+
+#social-links {
+  margin: 0 auto;
+}
+#social-links a {
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  display: inline-block;
+  padding: 0 15px;
+}
+#social-links a:hover {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+#social-links .fa-linkedin {
+  color: #0077B5;
+}
+#social-links .fa-twitter {
+  color: #659FCB;
+}
+#social-links .fa-github-alt {
+  color: #fff;
+}
+#social-links .fa-codepen {
+  color: #fff;
+}
+
+#sources {
+  margin: 25px auto 0 auto;
+  padding: 15px 0;
+  border-top: 1px solid #00b300;
+  font-size: .75em;
+  width: 75%;
+}
+
+/*# sourceMappingURL=styles.css.map */

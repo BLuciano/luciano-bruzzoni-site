@@ -1,0 +1,76 @@
+header{
+	background-color: $black-opacity;
+	height: 55px;
+	width: 100%;
+	position: fixed;
+	z-index: 1001;
+
+	@media screen and(max-width: 600px){
+		border-bottom: 1px solid $green;
+	}
+}
+
+#navigation{
+	> a{
+		margin-top: 15px;
+		margin-left: 20px;
+		font-family: 'Black Ops One', cursive;
+		color: $green;
+		float: left;
+		font-size: 1.25em;
+		text-decoration: none;
+
+		&:hover{
+			color: lighten($green, 25);
+
+			&:after{
+				content: "cd /";
+				color: #fff;
+				padding-left: 5px;
+				font-style: italic;
+				margin-left: -10px;
+			}
+
+			span{
+				left: 50px;
+			}
+		}
+
+		span{
+			position: relative;
+			display: inline-block;
+			background-color: $green;
+			width: 10px;
+			height: 20px;
+			@include animation(blink .60s ease-in infinite);
+			@include animation-direction(alternate-reverse);
+			@include keyframes(blink) {
+				from{
+					@include opacity(1);
+				}
+				to{
+					@include opacity(0);
+				}				
+			}
+		}
+	}
+
+	@media screen and(max-width: 600px){
+		margin: 0;
+		width: 100%;
+	}
+
+	button{
+		display: none;
+		@include nav-margin;
+		background-color: rgba(0,0,0,0);
+		font-size: 1.25em;
+		color: #fff;
+		float: right;
+		border: none;
+
+		@media screen and(max-width: 600px){
+			display: inline-block;
+		}
+	}
+}

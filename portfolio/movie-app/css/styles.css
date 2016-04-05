@@ -1,0 +1,157 @@
+body{
+	background-color: black;
+	font-size: 1em;
+	font-family: sans-serif;
+	color: white;
+}
+
+img{
+	max-width: 100%;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/*/////////////////////////////////
+HEADER SECTION
+/////////////////////////////////*/
+
+header {
+	height: 250px;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+header h1{
+	color: orange;
+	font-weight: 800;
+	margin-bottom: 25px;
+	padding-bottom: 25px; 
+	border-bottom: 1px solid red;
+}
+
+/*/////////////////////////////////
+FORM SECTION
+/////////////////////////////////*/
+
+#container{
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+	height: 500px; /*Extra space when page loads and theres nothing to display */
+}
+
+
+input[type="search"]{
+	width: 100%;
+	margin: 15px auto;
+	display: block;
+	color: black;
+	text-align: center;
+	background-color: yellow;
+	border-radius: 50px;
+}
+
+input[type="search"]:focus, 
+input[type="submit"]:focus{
+	outline: none;
+}
+
+input[type="submit"]{
+	color: white;
+	width: 90px;
+	margin-bottom: 50px;
+	border: none;
+	padding: 5px;
+	background-color: steelblue;
+	border-radius: 50px;
+}
+
+/*/////////////////////////////////
+MOVIE RESULTS SECTION
+/////////////////////////////////*/
+
+#error-message{
+	font-style: italic;
+	color: red;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.results{
+	background-color: #403f3d;
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+}
+
+.results img{
+	margin-top: 25px;
+	border-radius: 150px;
+}
+
+.results ul{
+	text-align: left;
+	margin: 30px 2.5%;
+	line-height: 200%;
+	font-size: .90em;
+}
+
+.results ul li span{
+	color: yellow;
+}
+
+
+/*/////////////////////////////////
+FOOTER SECTION
+/////////////////////////////////*/
+
+footer{
+	height: 75px;
+	font-size: .75em;
+	border-top: 1px solid red;
+	text-align: center;
+}
+
+
+/*/////////////////////////////////
+MEDIA QUERIES
+/////////////////////////////////*/
+
+@media screen and (min-width: 450px){
+	input[type="search"]{
+		width: 350px;
+	}
+}
+
+@media screen and (min-width: 800px){
+	.poster{
+		float: left;
+		margin-left: 10px;
+		margin-right: 25px;
+	}
+
+	.movie-details{
+		padding-top: 25px;
+		overflow: hidden; /*Stops text from wrapping under image*/
+	}
+
+	.results{
+		overflow: hidden;  /* make floated image take space and not overlap footer */
+	}
+
+	footer{
+		clear: both;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.results{
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

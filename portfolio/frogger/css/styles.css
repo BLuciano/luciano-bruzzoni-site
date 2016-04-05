@@ -1,0 +1,258 @@
+/***********************
+GLOBAL STYLES
+***********************/
+
+body{
+	background-color: #162955;
+	font-size: 1em;
+	font-family: helvetica, arial, sans-serif;
+	z-index: 1000;
+	margin: 0;
+	padding: 0;
+}
+
+#game-body{
+	overflow: hidden;
+}
+
+h1{
+	font-size: 4em;
+}
+
+
+
+/***********************
+HEADER STYLES
+***********************/
+
+header h1{
+	text-align: center;
+	color: #D4A76A;
+}
+
+#poster-img{
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	border: 2px solid white;
+}
+
+#play-button{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#play-button a:link, a:active, a:visited{
+	color: white;
+}
+
+#play-button p {
+	color: yellow;
+}
+
+.disabled{
+	pointer-events: none;
+	opacity: .5;
+}
+
+
+
+/***********************
+GAME-DISPLAY STYLES
+***********************/
+
+#wrapper{
+	width: 1200px;
+	height: 700px;
+	overflow: hidden;
+}
+
+.level1{
+	background: url("../img/background.gif");
+}
+
+.level2{
+	background: url("../img/level2.gif");
+}
+
+.level3{
+	background: url("../img/level3.gif");
+}
+
+
+
+/***********************
+TEXT-AREA STYLES
+***********************/
+
+#text-input{
+	width: 800px;
+	height: 450px;
+	background-color: black;
+	color: white;
+	opacity: 0.80;
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+	display: none;
+	text-align: center;
+	z-index: 1001;
+	overflow: hidden;
+}
+
+
+
+/***********************
+CARS STYLES / POSITIONING
+***********************/
+
+#cars div{
+	height: 70px;
+	width: auto;
+}
+
+#bottom-car1{
+	position: absolute;
+	top: 540px;
+	left: 750px;
+}
+
+#bottom-car2{
+	position: absolute;
+	top: 540px;
+	left: 150px;
+}
+
+#middle-car1{
+	position: absolute;
+	top: 470px;
+	left: 1100px;
+}
+
+#middle-car2{
+	position: absolute;
+	top: 470px;
+	left: 650px;
+}
+
+#middle-car3{
+	position: absolute;
+	top: 470px;
+	left: 250px;
+}
+
+#upper-car1{
+	position: absolute;
+	top: 400px;
+	left: 25px;
+}
+
+#upper-car2{
+	position: absolute;
+	top: 400px;
+	left: 750px
+}
+
+#top-car1{
+	position: absolute;
+	top: 330px;
+	left: 900px;
+}
+
+#top-car2{
+	position: absolute;
+	top: 330px;
+	left: 400px;
+}
+
+#top-car3{
+	position: absolute;
+	top: 330px;
+	left: 100px;
+}
+
+
+
+/***********************
+WATER ELEMENT STYLES / POSITIONING
+***********************/
+
+#plant-log div{
+	height: 70px;
+	width: auto;
+}
+
+#bottom-log1{
+	position: absolute;
+	top: 190px;
+	left: 200px;
+}
+
+#bottom-log2{
+	position: absolute;
+	top: 190px;
+	left: 600px;
+}
+
+#bottom-log3{
+	position: absolute;
+	top: 190px;
+	left: 1000px;
+}
+
+#plant1{
+	position: absolute;
+	top: 140px;
+	left: 0px;
+}
+
+#plant2{
+	position: absolute;
+	top: 140px;
+	left: 400px;
+}
+
+#plant3{
+	position: absolute;
+	top: 140px;
+	left: 800px;
+}
+
+#top-log1{
+	position: absolute;
+	top: 50px;
+	left: 300px;
+}
+
+#top-log2{
+	position: absolute;
+	top: 50px;
+	left: 700px;
+}
+
+/***********************
+FROG STYLES / POSITIONING
+***********************/
+
+#froggy{
+	height: 70px;
+	width: auto;
+	position: absolute;
+	top: 610px;
+	left: 560px;
+	z-index: 1000;
+}
+
+
+
+/***********************
+FOOTER
+***********************/
+footer{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 75px;
+	color: #D4A76A;
+	border-top: 1px white solid;
+}

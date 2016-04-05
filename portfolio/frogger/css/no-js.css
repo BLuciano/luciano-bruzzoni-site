@@ -1,0 +1,9 @@
+#play-button a{
+	pointer-events: none;
+	opacity: .5;
+}
+
+noscript p{
+	color: yellow;
+	text-align: center;
+}

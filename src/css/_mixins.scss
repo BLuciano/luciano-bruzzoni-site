@@ -1,0 +1,34 @@
+@mixin set-position($pos, $top, $top-pos, $left, $left-pos) {
+	position: $pos;
+	#{$top}: $top-pos;
+	#{$left}: $left-pos;
+}
+
+@mixin nav-margin{
+	margin-top: 15px;
+	margin-right: 20px;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin text-shadow{
+	text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+}
+
+@mixin titles{
+	h1{
+		@include text-shadow;
+		font-family: 'Black Ops One', sans-serif;
+		text-align: center;
+		color: $green;
+		font-size: 3em;
+	}
+}
+
+@mixin projects-border-radius{
+	border-radius: 15px;
+}

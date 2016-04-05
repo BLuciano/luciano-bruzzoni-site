@@ -1,0 +1,98 @@
+nav{
+	@include nav-margin;
+	position: relative;
+	font-size: 0;
+	float: right;
+	display: block;
+	
+	li{
+		position: relative;
+		display: inline-block;
+		margin-left: 25px;
+	}	
+	&.showNav li{
+		height: 20;
+	}
+
+	a{
+		@include transition(all .5s);
+		font-family: 'Black Ops One', serif;
+		font-size: 16px;
+		color: $green;
+		text-decoration: none;
+		display: inline-block;
+		
+		&:after{
+			@include transition(width 0.5s);
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			text-align: center;
+			width: 0;
+			height: 3px;
+			background-color: lighten($green, 25);
+		}
+
+	  	&:link, &:visited{
+			color: $green;
+		}
+
+		&:hover{
+			color: lighten($green, 25);
+		}
+	}
+
+	@media screen and(max-width: 600px){
+		width: 100%;
+		margin-right: 0;
+		margin-top: 11px;
+
+		ul{
+			@include transition(all .35s);
+			position: relative;
+			top: -35px;
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		li{
+			@include transition(height .25s);
+			height: 0;
+			margin: 0;
+			background-color: rgba(0,0,0, .85);
+			text-align: center;
+			display: block;
+		}
+
+		a{	
+			padding: 8px 0;
+			width: 100%;
+
+			&:after{
+				content: none;
+			}
+
+			&:hover{
+				background-color: $green;
+				color: #000;
+			}
+		}
+
+		&.showNav ul{
+			@include transition(all .35s);
+			top: 0px;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&.showNav li{
+			@include transition(height .25s);
+			height: 36px;
+		}
+	}
+}
+
+a.anim-nav-link:after{
+	width: 100%;
+}

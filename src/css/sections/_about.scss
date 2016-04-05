@@ -1,0 +1,111 @@
+#about-me{
+	width: auto;
+	height: auto;
+	@include titles;
+	margin-top: 25px; 
+	margin-bottom: 75px;
+	
+	.fa{
+	display: block;
+		text-align: center;
+	}
+
+	a{
+		color: darken($green, 10 );
+		text-decoration: none;
+		font-weight: 600;
+
+		&:hover{
+			color: $green;
+		}
+	}
+}
+
+#my-pics{
+	@include transition(margin-top 1s);
+	width: 35%;
+	max-height: 450px;
+	display: inline-block;
+	float: left;
+	margin: 150px 2.5% 75px 0;
+	
+	img{
+		box-shadow: 10px 10px 6px -6px rgba(255,255,255, .5);
+		max-width: 95%;
+		max-height: 450px;
+		margin: 15px 2.5%;
+		text-align: center;
+	}
+		
+	@media screen and(max-width: 1030px){
+		@include transition(margin-top 1s);
+		margin-top: 200px;
+	}
+
+	@media screen and(max-width: 890px){
+		@include transition(margin-top 1s);
+		float: none;
+		display: block;
+		width: 90%;
+		margin: 25px auto 0 auto;
+
+		img{
+			display: block;
+			margin: 15px auto;
+		}
+
+	}			
+}
+
+div.description{
+	width: 60%;
+	display: inline-block;
+	margin: 40px 0 25px 2.5%; 
+
+	p{
+		line-height: 1.5;
+	}
+
+	@media screen and(max-width: 1030px){
+		width: 55%;
+	}
+	@media screen and(max-width: 890px){
+		width: 90%;
+		margin: 20px 5% 0 5%;
+	}
+}
+
+div.treehouse{
+	clear: both;
+	height: auto;
+	text-align: center;
+	margin-top: 25px;
+}
+
+.treehouse div.item{
+	display: inline-block;
+	float: left;
+	width: 23%;
+	margin: 10px 1%;
+
+	img{
+	vertical-align: bottom;
+		width: auto;
+		max-height: 200px;
+	}
+	
+	@media screen and(max-width: 925px){
+		width: 48%;
+	}
+
+	@media screen and(max-width: 700px){
+		img{
+			max-height: 125px;
+		}
+	}
+	@media screen and(max-width: 500px){
+		width: 100%;
+		margin: 0;
+		float: none;
+	}
+}

@@ -1,0 +1,73 @@
+form{
+	text-align: center;
+	margin: 150px auto 0 auto;
+	background-color: rgba(0, 0, 0, .85);
+	padding: 20px;
+	color: $green;
+	width: 60%;
+	outline-color: #fff;
+	outline-style: groove;
+	outline-width: thick;
+	display: none;
+
+	input, textarea{
+		padding: 12px;
+		margin-bottom: 0;
+		border: none;
+	
+		&:focus{
+			outline: none;
+		}
+	}
+
+	input{
+		width: 250px;
+		height: 25px;
+		border-bottom: 1px solid $green;
+		background-color: rgb(25,25,25);
+		background-color: rgba(0,0,0,0);
+	}
+
+	textarea{
+		width: 80%;
+		height: 175px;
+		resize: none;
+		background-color: rgb(25,25,25);
+		background-color: rgba(25, 25, 25, .95);
+	}
+
+	button.send{
+		@include transition(all .5s);
+		margin-top: -15px;
+		background-color: darken($green, 20);
+		color: #fff;
+		border: none;
+		width: 125px;
+		padding: 10px 15px;
+		border-radius: 10px;
+	
+		&:hover{
+			background-color: darken($green, 10);
+		}
+
+		&:focus{
+			outline: none;
+		}
+	}	
+
+	@media screen and(max-width: 800px){
+		width: 75%;
+	}
+	@media screen and(max-width: 500px){
+		width: 85%;
+		padding-left: 0;
+		padding-right: 0;
+
+		input, textarea{
+			width: 80%;
+		}
+		textarea{
+			font-size: .90em;
+		}
+	}
+}

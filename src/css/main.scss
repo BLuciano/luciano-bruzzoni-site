@@ -1,0 +1,21 @@
+// DEFINITIONS AND GLOBALS
+@import "bourbon/bourbon";
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_globals.scss";
+
+// WEB SECTIONS
+@import "sections/_opening.scss";
+
+@import "sections/_header.scss";
+@import "sections/_navigation.scss";
+@import "sections/_landing.scss";
+
+@import "sections/_about.scss";
+@import "sections/_portfolio.scss";
+@import "sections/_projects.scss";
+@import "sections/_contact.scss";
+@import "sections/_contact-form.scss";
+@import "sections/_footer.scss";
+
+

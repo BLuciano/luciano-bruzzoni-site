@@ -1,0 +1,100 @@
+#contact{ 
+	@include titles;
+	position: relative;
+	margin-bottom: 250px;
+	text-align: center;
+
+	h1{
+	margin-bottom:25px;
+	}
+	
+	p{
+		display: inline-block;
+		text-align: center;
+		padding: 5px 25px 10px 25px;
+	}
+
+	a{
+		&:link, &:active, &:visited {
+			color: $green;
+			text-decoration: none;
+		}
+
+		&:hover{
+			color: darken($green, 15);
+			text-decoration: none;
+		}
+	}
+
+	li{
+		display: inline-block;
+		padding: 10px;
+		color: #000;
+	}
+
+	.fa{
+		display: block;
+	}
+
+	.open-form{
+		@include transition(all .25s);
+		position: absolute;
+		bottom: -100px;
+		text-align: center;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		background-color: $green;
+		color: #fff;
+		font-weight: 600;
+		border: none;
+		width: 200px;
+		padding: 10px 15px;
+		border-radius: 10px;
+		border-bottom: 7px solid darken($green, 25);
+		
+		&:hover{
+			background-color: darken($green, 10);
+		}
+		&:focus, &:active{
+			outline: none;
+		}
+	}
+	
+	button.contact-btn-anim{
+		border-bottom: 1px solid darken($green, 25);
+	}
+}
+
+#map{
+	max-width: 75%;
+	margin: 20px auto;
+	height: 350px;
+	box-shadow: 10px 10px 6px -6px rgba(255,255,255, .5);;
+
+	@media screen and(max-width: 450px){
+		height: 250px;
+	}
+}
+
+#form-message{
+	@include transition(all .5s);
+	position: fixed;
+	z-index: -1;
+	top: 100px;
+	left: 0;
+	right: 0;
+	font-size: 1.15em;
+	opacity: 0;
+	width: 70vw;
+	padding: 15px;
+	background-color: #ffe680;
+	margin: 0 auto;
+	text-align: center;
+	color: red;
+
+	&.show-message{
+		opacity: 1;
+		z-index: 1001;
+	}
+}
