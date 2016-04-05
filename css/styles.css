@@ -473,6 +473,8 @@ div.treehouse {
   padding: 25px 0 50px 0;
   width: 100%;
   background-color: #bbb;
+  background: url(../imgs/wireframeBack.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 #portfolio h1 {
   text-shadow: 2px 2px 3px #333;
@@ -535,6 +537,11 @@ div.treehouse {
     margin: 0 .5%;
   }
 }
+@media only screen and (max-width: 700px) {
+  #portfolio .buttons button {
+    background-attachment: scroll;
+  }
+}
 @media screen and (max-width: 500px) {
   #portfolio .buttons button {
     width: 70px;
@@ -548,6 +555,10 @@ div.code-pen {
   clear: both;
   margin-top: 75px;
   text-align: center;
+}
+div.code-pen p {
+  font-weight: bold;
+  font-size: 1.2em;
 }
 div.code-pen a {
   text-decoration: none;
