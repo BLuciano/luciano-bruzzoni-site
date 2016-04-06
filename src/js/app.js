@@ -5,7 +5,7 @@ window.onload = function() {
 
   /*Holds the texts that will be displayed dynamically on opening page*/
   var phrases = {
-    str1 : 'Luciano Bruzzoni <br/> Front End Developer <br/>Coding ideas into reality',
+    str1 : 'Luciano Bruzzoni <br/> Front End Developer',
     str2 : '$(this).addClass("awesome");',
   };
 
@@ -243,8 +243,8 @@ window.onload = function() {
       red = Math.floor(Math.random() * 255);
       green = Math.floor(Math.random() * 255);
       blue = Math.floor(Math.random() * 255);
-      $("span.rgb").html(red + ", " + green + ", " + blue);
-      $("#landing h1, #landing h2, #landing h3")
+      $(".rgb span").html(red + ", " + green + ", " + blue);
+      $("#landing h1, #landing h2, #landing h3, .rgb")
         .css("color", "rgb(" + red + ", " + green + ", " + blue + ")");
     }, 3000);
   })();

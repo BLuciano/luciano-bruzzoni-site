@@ -233,7 +233,7 @@ body, html, h1, ul {
   .navigation {
     width: 100%;
     margin-right: 0;
-    margin-top: 18px;
+    margin-top: 9px;
   }
   .navigation ul {
     -webkit-transition: all 0.35s;
@@ -293,15 +293,14 @@ a.anim-nav-link:after {
   width: 100%;
   height: 600px;
   background-color: #000;
-  background: url(../imgs/background1.jpg) no-repeat center center fixed;
+  background: url(../imgs/background.jpg) no-repeat center center fixed;
   background-size: cover;
   text-align: center;
 }
-#landing h1, #landing h2, #landing h3 {
+#landing h1, #landing h2 {
   -webkit-transition: color 1s;
   -moz-transition: color 1s;
   transition: color 1s;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   color: #fff;
   line-height: 1;
   margin: 0 5% 15px 5%;
@@ -314,14 +313,14 @@ a.anim-nav-link:after {
 #landing h2 {
   font-size: 2em;
 }
-#landing h3 {
-  font-size: 1.5em;
-}
-#landing p {
-  text-shadow: 2px 2px 3px #333;
+#landing .rgb {
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  transition: color 1s;
+  font-family: 'Oswald', sans-serif;
   font-size: 2.25em;
   margin: 40px 15% 0 15%;
-  color: #00b300;
+  letter-spacing: 2px;
 }
 #landing a {
   display: inline-block;
@@ -342,10 +341,7 @@ a.anim-nav-link:after {
   #landing h2 {
     font-size: 1.75em;
   }
-  #landing h3 {
-    font-size: 1.25em;
-  }
-  #landing p {
+  #landing .rgb {
     font-size: 1.50em;
   }
 }
