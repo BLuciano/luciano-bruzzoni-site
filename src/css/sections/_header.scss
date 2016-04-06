@@ -45,6 +45,7 @@
 		background-color: $green;
 		width: 10px;
 		height: 20px;
+		top: 5px;
 		@include animation(blink .60s ease-in infinite);
 		@include animation-direction(alternate-reverse);
 		@include keyframes(blink) {
