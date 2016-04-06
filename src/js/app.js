@@ -211,10 +211,7 @@ window.onload = function() {
         if((str2.length -1) === i){
           window.clearInterval(timer2);
 
-          $(".t-left").addClass("hide");
-          $(".t-right").addClass("hide");
-          $(".b-left").addClass("hide");
-          $(".b-right").addClass("hide");
+          $(".hide-part").addClass("hide");
           $("#opening-anim p").fadeOut();
           window.setTimeout(function(){
             $("#opening-anim").css('display', "none");

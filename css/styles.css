@@ -37,32 +37,32 @@ body, html, h1, ul {
   position: fixed;
   z-index: 2000;
 }
-#opening-anim div {
+#opening-anim .hide-part {
   width: 50%;
   height: 50%;
   background-color: #0d0d0d;
 }
-#opening-anim div.t-left {
+#opening-anim .t-left {
   position: absolute;
   top: 0;
   left: 0;
 }
-#opening-anim div.t-right {
+#opening-anim .t-right {
   position: absolute;
   top: 0;
   right: 0;
 }
-#opening-anim div.b-left {
+#opening-anim .b-left {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-#opening-anim div.b-right {
+#opening-anim .b-right {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-#opening-anim div.hide {
+#opening-anim .hide {
   height: 0;
   width: 0;
   -webkit-transition: all 3s;

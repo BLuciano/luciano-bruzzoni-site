@@ -6,23 +6,23 @@
 	position: fixed;
 	z-index: 2000;
 	
-	div{
+	.hide-part{
 		width: 50%;
 		height: 50%;
 		background-color: #0d0d0d;
-		
-		&.t-left{ @include set-position(absolute, top, 0, left, 0);}
-		&.t-right{ @include set-position(absolute, top, 0, right, 0);}
-		&.b-left{ @include set-position(absolute, bottom, 0, left, 0);}
-		&.b-right{ @include set-position(absolute, bottom, 0, right, 0)}
-
-		&.hide{
-			height: 0;
-			width: 0;
-			@include transition(all 3s);
-		}
 	}
+		
+	.t-left{ @include set-position(absolute, top, 0, left, 0);}
+	.t-right{ @include set-position(absolute, top, 0, right, 0);}
+	.b-left{ @include set-position(absolute, bottom, 0, left, 0);}
+	.b-right{ @include set-position(absolute, bottom, 0, right, 0)}
 
+	.hide{
+		height: 0;
+		width: 0;
+		@include transition(all 3s);
+	}
+	
 	p{
 		color: $green;
 		z-index: 2001;
