@@ -80,7 +80,7 @@ body, html, h1, ul {
   top: 33%;
 }
 
-header {
+.mainHdr {
   background-color: rgba(0, 0, 0, 0.85);
   height: 55px;
   width: 100%;
@@ -88,12 +88,16 @@ header {
   z-index: 1001;
 }
 @media screen and (max-width: 600px) {
-  header {
+  .mainHdr {
     border-bottom: 1px solid #00b300;
+  }
+  .mainHdr > div {
+    margin: 0;
+    width: 100%;
   }
 }
 
-#navigation > a {
+.home-link {
   margin-top: 15px;
   margin-left: 20px;
   color: #00b300;
@@ -101,20 +105,20 @@ header {
   font-size: 1.25em;
   text-decoration: none;
 }
-#navigation > a:hover {
+.home-link:hover {
   color: #34ff34;
 }
-#navigation > a:hover:after {
+.home-link:hover:after {
   content: "cd /";
   color: #fff;
   padding-left: 5px;
   font-style: italic;
   margin-left: -10px;
 }
-#navigation > a:hover span {
+.home-link:hover span {
   left: 50px;
 }
-#navigation > a span {
+.home-link span {
   position: relative;
   display: inline-block;
   background-color: #00b300;
@@ -157,13 +161,7 @@ header {
     filter: alpha(opacity=0);
   }
 }
-@media screen and (max-width: 600px) {
-  #navigation {
-    margin: 0;
-    width: 100%;
-  }
-}
-#navigation button {
+.drop-down {
   display: none;
   margin-top: 15px;
   margin-right: 20px;
@@ -174,12 +172,12 @@ header {
   border: none;
 }
 @media screen and (max-width: 600px) {
-  #navigation button {
+  .drop-down {
     display: inline-block;
   }
 }
 
-nav {
+.navigation {
   margin-top: 15px;
   margin-right: 20px;
   position: relative;
@@ -187,15 +185,22 @@ nav {
   float: right;
   display: block;
 }
-nav li {
+@media screen and (max-width: 600px) {
+  .navigation {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 18px;
+  }
+}
+.navigation li {
   position: relative;
   display: inline-block;
   margin-left: 25px;
 }
-nav.showNav li {
+.navigation.showNav li {
   height: 20;
 }
-nav a {
+.navigation a {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -204,7 +209,7 @@ nav a {
   text-decoration: none;
   display: inline-block;
 }
-nav a:after {
+.navigation a:after {
   -webkit-transition: width 0.5s;
   -moz-transition: width 0.5s;
   transition: width 0.5s;
@@ -217,19 +222,19 @@ nav a:after {
   height: 3px;
   background-color: #34ff34;
 }
-nav a:link, nav a:visited {
+.navigation a:link, .navigation a:visited {
   color: #00b300;
 }
-nav a:hover {
+.navigation a:hover {
   color: #34ff34;
 }
 @media screen and (max-width: 600px) {
-  nav {
+  .navigation {
     width: 100%;
     margin-right: 0;
     margin-top: 18px;
   }
-  nav ul {
+  .navigation ul {
     -webkit-transition: all 0.35s;
     -moz-transition: all 0.35s;
     transition: all 0.35s;
@@ -238,7 +243,7 @@ nav a:hover {
     visibility: hidden;
     opacity: 0;
   }
-  nav li {
+  .navigation li {
     -webkit-transition: height 0.25s;
     -moz-transition: height 0.25s;
     transition: height 0.25s;
@@ -248,18 +253,18 @@ nav a:hover {
     text-align: center;
     display: block;
   }
-  nav a {
+  .navigation a {
     padding: 8px 0;
     width: 100%;
   }
-  nav a:after {
+  .navigation a:after {
     content: none;
   }
-  nav a:hover {
+  .navigation a:hover {
     background-color: #00b300;
     color: #000;
   }
-  nav.showNav ul {
+  .navigation.showNav ul {
     -webkit-transition: all 0.35s;
     -moz-transition: all 0.35s;
     transition: all 0.35s;
@@ -267,7 +272,7 @@ nav a:hover {
     visibility: visible;
     opacity: 1;
   }
-  nav.showNav li {
+  .navigation.showNav li {
     -webkit-transition: height 0.25s;
     -moz-transition: height 0.25s;
     transition: height 0.25s;

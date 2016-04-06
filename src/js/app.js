@@ -48,17 +48,17 @@ window.onload = function() {
 
   //Show, hide hamburger navigation
   $("#navtog").click(function(){
-    $("#navigation nav").toggleClass("showNav");
+    $(".navigation").toggleClass("showNav");
   });
-  $("#navigation a").click(function(){
-    $("#navigation nav").removeClass("showNav");
+  $(".mainHdr a").click(function(){
+    $(".navigation").removeClass("showNav");
   });
   //hover state for nav links, avoids touch-screen event
-  $("#navigation a").mouseenter(function(){
+  $(".mainHdr a").mouseenter(function(){
     if ("ontouchstart" in window){ return; }
     $(this).addClass("anim-nav-link");
   });
-  $("#navigation a").mouseleave(function(){
+  $(".mainHdr a").mouseleave(function(){
     if ("ontouchend" in window){ return; }
     $(this).removeClass("anim-nav-link");
   });

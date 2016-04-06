@@ -1,9 +1,15 @@
-nav{
+.navigation{
 	@include nav-margin;
 	position: relative;
 	font-size: 0;
 	float: right;
 	display: block;
+
+	@media screen and(max-width: 600px){
+		width: 100%;
+		margin-right: 0;
+		margin-top: 18px;
+	}
 	
 	li{
 		position: relative;

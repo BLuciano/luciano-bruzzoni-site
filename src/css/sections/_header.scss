@@ -1,4 +1,4 @@
-header{
+.mainHdr{
 	background-color: $black-opacity;
 	height: 55px;
 	width: 100%;
@@ -7,69 +7,67 @@ header{
 
 	@media screen and(max-width: 600px){
 		border-bottom: 1px solid $green;
+
+		> div{
+			margin: 0;
+			width: 100%;
+		}
 	}
 }
 
-#navigation{
-	> a{
-		margin-top: 15px;
-		margin-left: 20px;
-		color: $green;
-		float: left;
-		font-size: 1.25em;
-		text-decoration: none;
+.home-link{
+	margin-top: 15px;
+	margin-left: 20px;
+	color: $green;
+	float: left;
+	font-size: 1.25em;
+	text-decoration: none;
 
-		&:hover{
-			color: lighten($green, 25);
+	&:hover{
+		color: lighten($green, 25);
 
-			&:after{
-				content: "cd /";
-				color: #fff;
-				padding-left: 5px;
-				font-style: italic;
-				margin-left: -10px;
-			}
-
-			span{
-				left: 50px;
-			}
+		&:after{
+			content: "cd /";
+			color: #fff;
+			padding-left: 5px;
+			font-style: italic;
+			margin-left: -10px;
 		}
 
 		span{
-			position: relative;
-			display: inline-block;
-			background-color: $green;
-			width: 10px;
-			height: 20px;
-			@include animation(blink .60s ease-in infinite);
-			@include animation-direction(alternate-reverse);
-			@include keyframes(blink) {
-				from{
-					@include opacity(1);
-				}
-				to{
-					@include opacity(0);
-				}				
-			}
+			left: 50px;
 		}
 	}
+
+	span{
+		position: relative;
+		display: inline-block;
+		background-color: $green;
+		width: 10px;
+		height: 20px;
+		@include animation(blink .60s ease-in infinite);
+		@include animation-direction(alternate-reverse);
+		@include keyframes(blink) {
+			from{
+				@include opacity(1);
+			}
+			to{
+				@include opacity(0);
+			}				
+		}
+	}
+}
+
+.drop-down{
+	display: none;
+	@include nav-margin;
+	background-color: rgba(0,0,0,0);
+	font-size: 1.25em;
+	color: #fff;
+	float: right;
+	border: none;
 
 	@media screen and(max-width: 600px){
-		margin: 0;
-		width: 100%;
-	}
-
-	button{
-		display: none;
-		@include nav-margin;
-		background-color: rgba(0,0,0,0);
-		font-size: 1.25em;
-		color: #fff;
-		float: right;
-		border: none;
-
-		@media screen and(max-width: 600px){
-			display: inline-block;
-		}
+		display: inline-block;
 	}
 }
