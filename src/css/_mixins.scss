@@ -21,7 +21,6 @@
 
 @mixin titles{
 	h1{
-		@include text-shadow;
 		text-align: center;
 		color: $green;
 		font-size: 3em;

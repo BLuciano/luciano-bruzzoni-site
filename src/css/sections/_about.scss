@@ -1,7 +1,7 @@
 #about-me{
+	@include titles;
 	width: auto;
 	height: auto;
-	@include titles;
 	margin-top: 25px; 
 	margin-bottom: 75px;
 	

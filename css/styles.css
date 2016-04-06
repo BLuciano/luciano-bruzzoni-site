@@ -353,7 +353,6 @@ a.anim-nav-link:after {
   margin-bottom: 75px;
 }
 #about-me h1 {
-  text-shadow: 2px 2px 3px #333;
   text-align: center;
   color: #00b300;
   font-size: 3em;
@@ -479,7 +478,6 @@ div.treehouse {
   background-size: cover;
 }
 #portfolio h1 {
-  text-shadow: 2px 2px 3px #333;
   text-align: center;
   color: #00b300;
   font-size: 3em;
@@ -685,7 +683,6 @@ div.api-projects .shadow:after, div.game-room .shadow:after, div.cms-custom .sha
   text-align: center;
 }
 #contact h1 {
-  text-shadow: 2px 2px 3px #333;
   text-align: center;
   color: #00b300;
   font-size: 3em;
