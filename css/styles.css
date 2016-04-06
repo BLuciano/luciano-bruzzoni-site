@@ -350,7 +350,7 @@ a.anim-nav-link:after {
   width: auto;
   height: auto;
   margin-top: 25px;
-  margin-bottom: 75px;
+  margin-bottom: 150px;
 }
 #about-me h1 {
   text-align: center;
@@ -428,42 +428,6 @@ div.description p {
   div.description {
     width: 90%;
     margin: 20px 5% 0 5%;
-  }
-}
-
-div.treehouse {
-  clear: both;
-  height: auto;
-  text-align: center;
-  margin-top: 25px;
-}
-
-.treehouse div.item {
-  display: inline-block;
-  float: left;
-  width: 23%;
-  margin: 10px 1%;
-}
-.treehouse div.item img {
-  vertical-align: bottom;
-  width: auto;
-  max-height: 200px;
-}
-@media screen and (max-width: 925px) {
-  .treehouse div.item {
-    width: 48%;
-  }
-}
-@media screen and (max-width: 700px) {
-  .treehouse div.item img {
-    max-height: 125px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .treehouse div.item {
-    width: 100%;
-    margin: 0;
-    float: none;
   }
 }
 

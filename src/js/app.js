@@ -65,30 +65,8 @@ window.onload = function() {
 
   //Ajax call to get treehouse recent badges
   function getTreeHouse(){
-    var url = "https://teamtreehouse.com/lucianobruzzoni.json";
-    var html = "", size = 0;
-    
-    $.ajax({
-      type: 'GET',
-      url: url
-    })
-    .done(function(data){
-      size = data.badges.length - 1;
-      for(var i = size; i > size - 4; i--){
-        html+= "<div class='item'>";
-        html+= "<h3 class='title'>" + data.badges[i].name;
-        html+= "<p class='date'>";
-        html+= (data.badges[i].earned_date).slice(0,10) + "</p></h3>";
-        html+= "<img src='" + data.badges[i].icon_url + "' alt='TreeHouse badge'/></div>";
-      }
-      html+= "<div style='clear: both;'>&nbsp;</div>";
-      $(".treehouse").append(html);
-    })
-    .fail(function(error){
-      $(".treehouse").append("Error loading Treehouse Database");
-    });
-    playProjects();
-    getMap(); //Call function to set Google Map, do this after in order to avoid initial loading lag.
+  
+     //Call function to set Google Map, do this after in order to avoid initial loading lag.
   }
 
   //contact form 
@@ -215,7 +193,9 @@ window.onload = function() {
           $("#opening-anim p").fadeOut();
           window.setTimeout(function(){
             $("#opening-anim").css('display', "none");
-            getTreeHouse(); //Call function to set TreeHouse badges.
+            /*Call playProjects and getMap once done to reduce initial load time*/
+            playProjects();
+            getMap();
           }, 2000);
         }
         log += str2[i];
