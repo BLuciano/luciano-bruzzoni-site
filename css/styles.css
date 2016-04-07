@@ -450,17 +450,10 @@ div.description p {
 #portfolio h1 {
   margin-bottom: 50px;
 }
-#portfolio div.buttons {
-  margin: 0 0 0 10%;
+#portfolio .buttons {
+  margin: 0 auto;
   width: auto;
   text-align: center;
-  float: left;
-}
-@media screen and (max-width: 875px) {
-  #portfolio div.buttons {
-    margin: 0 auto;
-    float: none;
-  }
 }
 #portfolio .buttons button {
   -webkit-transition-property: -webkit-transform;
@@ -469,11 +462,11 @@ div.description p {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  display: block;
+  display: inline-block;
+  margin: 0 .5%;
   vertical-align: top;
   width: 100px;
   height: 100px;
-  margin: 25px 0;
   border-radius: 50%;
   background-color: #000;
   text-align: center;
@@ -493,17 +486,6 @@ div.description p {
 #portfolio .buttons button.active {
   background-color: #00b300;
   color: #000;
-}
-@media screen and (max-width: 875px) {
-  #portfolio .buttons button {
-    display: inline-block;
-    margin: 0 .5%;
-  }
-}
-@media only screen and (max-width: 700px) {
-  #portfolio .buttons button {
-    background-attachment: scroll;
-  }
 }
 @media screen and (max-width: 500px) {
   #portfolio .buttons button {
@@ -538,7 +520,6 @@ button.push-btn-anim {
   -ms-transform: scale(0.85);
   -o-transform: scale(0.85);
   transform: scale(0.85);
-  box-shadow: 2px 2px 5px #777;
   outline: none;
 }
 
@@ -555,7 +536,7 @@ div.api-projects div, div.game-room div, div.cms-custom div, div.other-projects 
   position: relative;
   z-index: 2;
   width: 600px;
-  margin: 0 auto 20px 0;
+  margin: 0 auto;
 }
 div.api-projects div a, div.game-room div a, div.cms-custom div a, div.other-projects div a {
   text-decoration: none;
