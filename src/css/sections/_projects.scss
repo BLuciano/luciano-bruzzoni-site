@@ -55,10 +55,36 @@ div.api-projects, div.game-room, div.cms-custom, div.other-projects{
 		}
 	}
 	
-	@media screen and(max-width: 600px){
+	@media screen and (max-width: 600px){
 		display: block;
 	}
-	@media screen and(max-width: 500px){
+	@media screen and (max-width: 500px){
 		margin-top: 40px;
 	}
+}
+
+@include glowing-effect;
+
+.code-link{
+	position: relative;
+    left: 45%;
+    top: -45px;
+    color: $green;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  	-webkit-animation-name: glowing-effect;
+    animation-name: glowing-effect;
+  	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+
+    &:hover{
+    	cursor: help;
+    }
+
+    @media screen and(max-width: 600px){
+    	left: 40%;
+    	top: -40px;
+    }
 }

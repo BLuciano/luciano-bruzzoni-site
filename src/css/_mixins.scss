@@ -30,3 +30,24 @@
 @mixin projects-border-radius{
 	border-radius: 15px;
 }
+
+@mixin glowing-effect{
+	@-webkit-keyframes glowing-effect {
+		from {
+	    	text-shadow: 0px 0px 0px #fff;
+	  	}
+
+	  	to {
+	    	text-shadow: 2px 2px 1px #fff;
+	  	}
+	}
+	@keyframes glowing-effect {
+		from {
+	    	text-shadow: 0px 0px 0px #fff;
+	  	}
+
+		to {
+	    	text-shadow: 2px 2px 1px #fff;
+	  	}
+	}
+}

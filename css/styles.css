@@ -585,6 +585,46 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
   }
 }
 
+@-webkit-keyframes glowing-effect {
+  from {
+    text-shadow: 0px 0px 0px #fff;
+  }
+  to {
+    text-shadow: 2px 2px 1px #fff;
+  }
+}
+@keyframes glowing-effect {
+  from {
+    text-shadow: 0px 0px 0px #fff;
+  }
+  to {
+    text-shadow: 2px 2px 1px #fff;
+  }
+}
+.code-link {
+  position: relative;
+  left: 45%;
+  top: -45px;
+  color: #00b300;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: glowing-effect;
+  animation-name: glowing-effect;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.code-link:hover {
+  cursor: help;
+}
+@media screen and (max-width: 600px) {
+  .code-link {
+    left: 40%;
+    top: -40px;
+  }
+}
+
 #contact {
   position: relative;
   margin-bottom: 250px;
