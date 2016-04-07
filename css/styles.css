@@ -616,13 +616,11 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
   margin-bottom: 25px;
 }
 #contact p {
-  display: inline-block;
   text-align: center;
-  padding: 5px 25px 10px 25px;
 }
 #contact a:link, #contact a:active, #contact a:visited {
-  color: #00b300;
   text-decoration: none;
+  color: #000;
 }
 #contact a:hover {
   color: #006700;
@@ -635,6 +633,12 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
 }
 #contact .fa {
   display: block;
+}
+#contact a.fa-linkedin {
+  background-color: #006DA6;
+}
+#contact a.fa-twitter {
+  background-color: #28A9E2;
 }
 #contact .open-form {
   -webkit-transition: all 0.25s;

@@ -9,15 +9,13 @@
 	}
 	
 	p{
-		display: inline-block;
 		text-align: center;
-		padding: 5px 25px 10px 25px;
 	}
 
 	a{
 		&:link, &:active, &:visited {
-			color: $green;
 			text-decoration: none;
+			color: #000;
 		}
 
 		&:hover{
@@ -34,6 +32,13 @@
 
 	.fa{
 		display: block;
+	}
+
+	a.fa-linkedin{
+		background-color: #006DA6;
+	}
+	a.fa-twitter{
+		background-color: #28A9E2;
 	}
 
 	.open-form{
