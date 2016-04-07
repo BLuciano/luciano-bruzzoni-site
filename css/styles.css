@@ -439,8 +439,6 @@ div.description p {
   padding: 25px 0 50px 0;
   width: 100%;
   background-color: #bbb;
-  background: url(../imgs/wireframeBack.jpg) no-repeat center center fixed;
-  background-size: cover;
 }
 #portfolio h1 {
   text-align: center;
@@ -448,7 +446,6 @@ div.description p {
   font-size: 3em;
 }
 #portfolio h1 {
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   margin-bottom: 50px;
 }
 #portfolio div.buttons {
@@ -479,7 +476,6 @@ div.description p {
   background-color: #000;
   text-align: center;
   color: #00b300;
-  box-shadow: 2px 10px 15px #777;
   border: 3px solid #00b300;
 }
 #portfolio .buttons button:hover {
@@ -574,7 +570,7 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
   border-bottom-right-radius: 15px;
   position: relative;
   margin: 0 auto;
-  margin-top: -58px;
+  margin-top: -52px;
   width: 600px;
   padding: 10px 0;
   font-size: 1em;
@@ -597,38 +593,6 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
   }
   div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-projects div p {
     width: auto;
-  }
-}
-div.api-projects .shadow:before, div.api-projects .shadow:after, div.game-room .shadow:before, div.game-room .shadow:after, div.cms-custom .shadow:before, div.cms-custom .shadow:after, div.other-projects .shadow:before, div.other-projects .shadow:after {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  bottom: 22px;
-  left: 10px;
-  width: 50%;
-  top: 80%;
-  max-width: 500px;
-  background: #666;
-  box-shadow: 0 35px 20px #666;
-  -webkit-transform: rotate(-8deg);
-  -moz-transform: rotate(-8deg);
-  -ms-transform: rotate(-8deg);
-  -o-transform: rotate(-8deg);
-  transform: rotate(-8deg);
-}
-div.api-projects .shadow:after, div.game-room .shadow:after, div.cms-custom .shadow:after, div.other-projects .shadow:after {
-  -webkit-transform: rotate(8deg);
-  -moz-transform: rotate(8deg);
-  -ms-transform: rotate(8deg);
-  -o-transform: rotate(8deg);
-  transform: rotate(8deg);
-  right: 10px;
-  left: auto;
-}
-@media screen and (max-width: 500px) {
-  div.api-projects .shadow:before, div.api-projects .shadow:after, div.game-room .shadow:before, div.game-room .shadow:after, div.cms-custom .shadow:before, div.cms-custom .shadow:after, div.other-projects .shadow:before, div.other-projects .shadow:after {
-    top: 65%;
-    box-shadow: 0 35px 15px #666;
   }
 }
 @media screen and (max-width: 688px) {

@@ -31,7 +31,7 @@ div.api-projects, div.game-room, div.cms-custom, div.other-projects{
 			@include border-bottom-radius(15px);
 			position: relative;
 			margin: 0 auto;
-			margin-top: -58px;
+			margin-top: -52px;
 			width: 600px;
 			padding: 10px 0;
 			font-size: 1em;
@@ -53,35 +53,6 @@ div.api-projects, div.game-room, div.cms-custom, div.other-projects{
 
 			p{
 			width: auto;
-			}
-		}
-	}
-
-	.shadow{
-		&:before, &:after{
-			position: absolute;
-			z-index: -1;
-			content: "";
-			bottom: 22px;
-			left: 10px;
-			width: 50%;
-			top: 80%;
-			max-width: 500px;
-			background: #666;
-			box-shadow: 0 35px 20px #666;
-			@include transform(rotate(-8deg));
-		}
-
-		&:after{
-			@include transform(rotate(8deg));
-			right: 10px;
-			left: auto;
-		}
-
-		@media screen and(max-width: 500px){
-			&:before, &:after{
-				top: 65%;
-				box-shadow: 0 35px 15px #666;
 			}
 		}
 	}
