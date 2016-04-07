@@ -438,6 +438,7 @@ div.description p {
   margin: 50px auto;
   padding: 25px 0 50px 0;
   width: 100%;
+  overflow: hidden;
   background-color: #bbb;
 }
 #portfolio h1 {
@@ -549,25 +550,20 @@ div.api-projects.hidden, div.game-room.hidden, div.cms-custom.hidden, div.other-
   display: none;
 }
 div.api-projects div, div.game-room div, div.cms-custom div, div.other-projects div {
-  border-radius: 15px;
   position: relative;
   z-index: 2;
   width: 600px;
   margin: 0 auto 20px 0;
-  border-radius: 15px;
 }
 div.api-projects div a, div.game-room div a, div.cms-custom div a, div.other-projects div a {
   text-decoration: none;
 }
 div.api-projects div img, div.game-room div img, div.cms-custom div img, div.other-projects div img {
-  border-radius: 15px;
   max-width: 100%;
   height: auto;
 }
 div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-projects div p {
   text-shadow: 2px 2px 3px #333;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   position: relative;
   margin: 0 auto;
   margin-top: -52px;
@@ -580,22 +576,22 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
   color: #fff;
 }
 @media screen and (max-width: 600px) {
+  div.api-projects div, div.game-room div, div.cms-custom div, div.other-projects div {
+    margin: 10px 0 20px 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+  div.api-projects div img, div.game-room div img, div.cms-custom div img, div.other-projects div img {
+    width: 100%;
+  }
   div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-projects div p {
     font-size: .80em;
-    margin-top: -50px;
+    width: 100%;
+    margin-top: -46px;
   }
 }
-@media screen and (max-width: 688px) {
-  div.api-projects div, div.game-room div, div.cms-custom div, div.other-projects div {
-    margin: 10px 1% 20px 1%;
-    text-align: center;
-    width: 95%;
-  }
-  div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-projects div p {
-    width: auto;
-  }
-}
-@media screen and (max-width: 688px) {
+@media screen and (max-width: 600px) {
   div.api-projects, div.game-room, div.cms-custom, div.other-projects {
     display: block;
   }

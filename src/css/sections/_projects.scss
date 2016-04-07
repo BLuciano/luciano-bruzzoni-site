@@ -9,26 +9,22 @@ div.api-projects, div.game-room, div.cms-custom, div.other-projects{
 	}
 
 	div{
-		@include projects-border-radius;
 		position: relative;
 		z-index: 2;
 		width: 600px;
 		margin: 0 auto 20px 0;
-		border-radius: 15px;
 
 		a{
 			text-decoration: none;
 		}
 
 		img{
-			@include projects-border-radius;
 			max-width: 100%;
 			height: auto;
 		}
 
 		p{
 			@include text-shadow;
-			@include border-bottom-radius(15px);
 			position: relative;
 			margin: 0 auto;
 			margin-top: -52px;
@@ -39,25 +35,27 @@ div.api-projects, div.game-room, div.cms-custom, div.other-projects{
 			background-color: #000;
 			background-color: rgba(0,0,0, .90);
 			color: #fff;
-		
-			@media screen and(max-width: 600px){
-				font-size: .80em;
-				margin-top: -50px;
-			}
 		}
 
-		@media screen and(max-width: 688px){
-			margin: 10px 1% 20px 1%;
+		@media screen and(max-width: 600px){
+			margin: 10px 0 20px 0;
+			padding: 0;
 			text-align: center;
-			width: 95%;
+			width: 100%;
+			
+			img{
+				width: 100%;
+			}
 
 			p{
-			width: auto;
+				font-size: .80em;
+				width: 100%;
+				margin-top: -46px;
 			}
 		}
 	}
 	
-	@media screen and(max-width: 688px){
+	@media screen and(max-width: 600px){
 		display: block;
 	}
 	@media screen and(max-width: 500px){
