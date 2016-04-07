@@ -3,6 +3,7 @@
 	position: relative;
 	margin-bottom: 250px;
 	text-align: center;
+	color: #444;
 
 	h1{
 	margin-bottom:25px;
@@ -15,7 +16,7 @@
 	a{
 		&:link, &:active, &:visited {
 			text-decoration: none;
-			color: #000;
+			color: #444;
 		}
 
 		&:hover{
@@ -27,18 +28,10 @@
 	li{
 		display: inline-block;
 		padding: 10px;
-		color: #000;
 	}
 
 	.fa{
 		display: block;
-	}
-
-	a.fa-linkedin{
-		background-color: #006DA6;
-	}
-	a.fa-twitter{
-		background-color: #28A9E2;
 	}
 
 	.open-form{

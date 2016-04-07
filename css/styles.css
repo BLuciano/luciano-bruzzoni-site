@@ -419,6 +419,7 @@ div.description {
 }
 div.description p {
   line-height: 1.5;
+  color: #444;
 }
 @media screen and (max-width: 1030px) {
   div.description {
@@ -521,6 +522,7 @@ div.code-pen {
 div.code-pen p {
   font-weight: bold;
   font-size: 1.2em;
+  color: #444;
 }
 div.code-pen a {
   text-decoration: none;
@@ -606,6 +608,7 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
   position: relative;
   margin-bottom: 250px;
   text-align: center;
+  color: #444;
 }
 #contact h1 {
   text-align: center;
@@ -620,7 +623,7 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
 }
 #contact a:link, #contact a:active, #contact a:visited {
   text-decoration: none;
-  color: #000;
+  color: #444;
 }
 #contact a:hover {
   color: #006700;
@@ -629,16 +632,9 @@ div.api-projects div p, div.game-room div p, div.cms-custom div p, div.other-pro
 #contact li {
   display: inline-block;
   padding: 10px;
-  color: #000;
 }
 #contact .fa {
   display: block;
-}
-#contact a.fa-linkedin {
-  background-color: #006DA6;
-}
-#contact a.fa-twitter {
-  background-color: #28A9E2;
 }
 #contact .open-form {
   -webkit-transition: all 0.25s;
