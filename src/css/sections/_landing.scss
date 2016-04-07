@@ -2,7 +2,7 @@
 	@include linear-gradient(to bottom, #8fdce5, #000);
 	padding-top: 50px;
 	width: 100%;
-	height: 600px;
+	height: 800px;
 	background-color: #000;
 	background: url(../imgs/background.jpg) no-repeat center center fixed;
 	background-size: cover;
@@ -16,7 +16,7 @@
 		padding: 0;
 	}
 	h1{
-		margin-top: 75px;
+		margin-top: 125px;
 		font-size: 3em;
 	}
 	h2{
@@ -34,12 +34,13 @@
 	a{
 		display: inline-block;
 		text-align: center;
-		margin-top: 50px;
+		margin-top: 100px;
 		color: $green;
 	}
 
-	@media only screen and(max-width: 700px){
-		background-attachment: scroll
+	@media screen and(max-width: 700px){
+		background-attachment: scroll;
+		height: 600px;
 	}
 
 	@media screen and(max-width: 450px){
