@@ -126,8 +126,8 @@ window.onload = function() {
     if($(this).html() === "Game Room"){
       $("div.game-room").delay(750).fadeIn(750);
     }
-    if($(this).html() === "CMS Custom"){
-      $("div.cms-custom").delay(750).fadeIn(750);
+    if($(this).html() === "Live"){
+      $("div.live-sites").delay(750).fadeIn(750);
     }
     if($(this).html() === "Others"){
       $("div.other-projects").delay(750).fadeIn(750);

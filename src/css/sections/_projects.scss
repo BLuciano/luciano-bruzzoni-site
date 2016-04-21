@@ -2,49 +2,11 @@ div.api-projects, div.game-room, div.live-sites, div.other-projects{
 	position: relative;
 	text-align: center;
 	margin: 75px auto;
-	display: inline-block;
 
 	&.hidden{
 		display: none;
 	}
 
-	> div{
-		display: inline-block;
-		width: 45%;
-		margin: 2em auto;
-
-		a{
-			text-decoration: none;
-		}
-
-		p{
-			@include text-shadow;
-			position: relative;
-			margin: 0 auto;
-			margin-top: -52px;
-			width: 600px;
-			padding: 10px 0;
-			font-size: 1em;
-			text-align: center;
-			background-color: #000;
-			background-color: rgba(0,0,0, .90);
-			color: #fff;
-		}
-
-		@media screen and(max-width: 600px){
-			
-			img{
-				width: 100%;
-			}
-
-			p{
-				font-size: .80em;
-				width: 100%;
-				margin-top: -46px;
-			}
-		}
-	}
-	
 	@media screen and (max-width: 600px){
 		display: block;
 	}
@@ -53,28 +15,73 @@ div.api-projects, div.game-room, div.live-sites, div.other-projects{
 	}
 }
 
-@include glowing-effect;
-
-.code-link{
+.project{
 	position: relative;
-    left: 45%;
-    top: -45px;
-    color: $green;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-  	-webkit-animation-name: glowing-effect;
-    animation-name: glowing-effect;
-  	-webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
+	display: inline-block;
+	width: 45%;
+	margin: 1em 1.25%;
+	background-color: #000;
+	color: #fff;
 
-    &:hover{
-    	cursor: help;
+	img{
+		position: relative;
+		z-index: 1000;
+		width: 100%;
+		opacity: 1;
+    	-webkit-transition: all .5s;
+    	-moz-transition: all .5s;
+  		-o-transition: all .5s; 
+    	transition: all .5s;
+    	vertical-align: bottom;
+	}
+
+	&:hover img{
+		opacity: .15;
+		z-index: 998;
+	    -webkit-transition: all .5s;
+	    -moz-transition: all .5s;
+	  	-o-transition: all .5s;  
+	    transition: all .5s;
+	}
+
+	&:hover .project-info{
+		top: 30%;
+		-webkit-transition: all .5s;
+    	-moz-transition: all .5s;
+  		-o-transition: all .5s;  
+    	transition: all .5s;
     }
 
-    @media screen and(max-width: 600px){
-    	left: 40%;
-    	top: -40px;
-    }
+	.project-info{
+		display: inline-block;
+		position: absolute;
+		top: 1%;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		-webkit-transition: all .5s;
+    	-moz-transition: all .5s;
+  		-o-transition: all .5s;  
+    	transition: all .5s;
+
+		a, a:visited{
+			text-decoration: none;
+			color: #fff;
+			padding: 0 1em;
+		}
+	}
+
+	@media screen and(max-width: 700px){
+		width: 100%;
+		margin: .5em auto;
+
+		img{
+			opacity: .15;
+			z-index: 998;
+		}
+
+		.project-info{
+			top: 30%;
+		}
+	}	
 }
