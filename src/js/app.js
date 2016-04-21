@@ -30,22 +30,6 @@ window.onload = function() {
     fade: true
   });
 
-  //Slick carousel plugin for projects
-  function playProjects(category){
-    var toPlay = '.api-projects';
-    if(category){
-      toPlay = category;
-    }
-    $(toPlay).slick({
-      autoplay: true,
-      autoplaySpeed: 4000,
-      speed: 500,
-      dots: true,
-      arrows: false,
-      pauseOnHover: false,
-    });
-  }
-
   //Show, hide hamburger navigation
   $("#navtog").click(function(){
     $(".navigation").toggleClass("showNav");
@@ -62,12 +46,6 @@ window.onload = function() {
     if ("ontouchend" in window){ return; }
     $(this).removeClass("anim-nav-link");
   });
-
-  //Ajax call to get treehouse recent badges
-  function getTreeHouse(){
-  
-     //Call function to set Google Map, do this after in order to avoid initial loading lag.
-  }
 
   //contact form 
   form.addEventListener('submit', function(event){
@@ -130,7 +108,7 @@ window.onload = function() {
     $(this).addClass("push-btn-anim");
   });
   $(".buttons button").on("mouseup touchend", function(){
-    var projArry = [".api-projects", ".game-room", ".cms-custom", ".other-projects"];
+    var projArry = [".api-projects", ".game-room", ".live-sites", ".other-projects"];
     $(this).removeClass("push-btn-anim");
 
     if($(this).hasClass("active")){
@@ -138,28 +116,21 @@ window.onload = function() {
     }
     $(".buttons button").removeClass("active");
     $(this).addClass("active");
-    $(".api-projects, .game-room, .cms-custom, .other-projects").addClass("hidden");
+    //$(".api-projects, .game-room, .live-sites, .other-projects").addClass("hidden");
+    $(".api-projects, .game-room, .live-sites, .other-projects").fadeOut(750);
     
-    for(var i = 0; i < projArry.length; i++){
-      if($(projArry[i]).hasClass('slick-initialized')){
-        $(projArry[i]).slick("unslick");
-      }
-    }
+    
     if($(this).html() === "API Projects"){
-      $("div.api-projects").removeClass("hidden");
-      playProjects(".api-projects");
+      $("div.api-projects").delay(750).fadeIn(750);
     }
     if($(this).html() === "Game Room"){
-      $("div.game-room").removeClass("hidden");
-      playProjects(".game-room");
+      $("div.game-room").delay(750).fadeIn(750);
     }
     if($(this).html() === "CMS Custom"){
-      $("div.cms-custom").removeClass("hidden");
-      playProjects(".cms-custom");
+      $("div.cms-custom").delay(750).fadeIn(750);
     }
     if($(this).html() === "Others"){
-      $("div.other-projects").removeClass("hidden");
-      playProjects(".other-projects");
+      $("div.other-projects").delay(750).fadeIn(750);
     }
   });
   
@@ -193,8 +164,7 @@ window.onload = function() {
           $("#opening-anim p").fadeOut();
           window.setTimeout(function(){
             $("#opening-anim").css('display', "none");
-            /*Call playProjects and getMap once done to reduce initial load time*/
-            playProjects();
+            /*Call getMap once done to reduce initial load time*/
             getMap();
           }, 2000);
         }
