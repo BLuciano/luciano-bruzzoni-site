@@ -593,7 +593,7 @@ div.api-projects.hidden, div.game-room.hidden, div.live-sites.hidden, div.other-
   color: #fff;
   padding: 0 1em;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .project {
     width: 100%;
     margin: .5em auto;
