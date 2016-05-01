@@ -1,6 +1,6 @@
 window.onload = function() {
-  var form = document.getElementById("contact-form");
-  var formMsg = document.getElementById("form-message");
+  var form = $("#contact-form");
+  var formMsg = $("#form-message");
   var formOpen = false;
 
   /*Holds the texts that will be displayed dynamically on opening page*/
@@ -48,7 +48,7 @@ window.onload = function() {
   });
 
   //contact form 
-  form.addEventListener('submit', function(event){
+  $(form).submit(function(event){
     event.preventDefault();
     formData = $(form).serialize();
     $.ajax({
@@ -57,16 +57,20 @@ window.onload = function() {
       data: formData
     })
     .done(function(data){
-      $(formMsg).html(data);
       $(formMsg).css("color", "green");
+      $(formMsg).html(data);
       clearForm();
     })
     .fail(function(error){
       $(formMsg).css("color", "red");
-      $(formMsg).html(
-        "There was an error sending the message. \n" +
-        "Please fill ALL fields and try again."
-      );
+      if(error.responseText !== ''){
+        $(formMsg).html(error.responseText);
+      } else {
+        $(formMsg).html(
+          "There was an error sending the message. \n" +
+          "Please try again."
+        );
+      }
     });
     displayMessage();
   });

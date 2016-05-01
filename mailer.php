@@ -6,7 +6,7 @@
         $message = "$email \n\n" . trim($_POST["message"]);
         $subject = "Web Inquiry";
         $to = "contact@lucianobruzzoni.com";
-        $headers = "From: $name <$email> \r\nReply-To: $name <$email>";
+        $headers = "From: $name <$to> \r\nReply-To: $name <$email>";
 
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
